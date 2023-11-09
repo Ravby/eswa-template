@@ -16,7 +16,170 @@
 \graphicspath{ {./figures/} }
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{verbatim} %comments% Template for producing ESWA-format journal articles using LaTeX    
+% Written by Miha Ravber                
+% Programming methodologies laboratory                    
+% Faculty of Electrical Engineering and Computer Science 
+% University of Maribor                              
+% Koroška cesta 46, 2000 Maribor                                       
+% E-mail: miha.ravber@um.si                           
+% WWW: https://lpm.feri.um.si/en/members/ravber/    
+% Created: November 20, 2020 by Miha Ravber                                          
+% Modified: November 9, 2023 by Miha Ravber                     
+% Use at your own risk :) 
+% Please submit your issues on the github page: https://github.com/Ravby/eswa-template
+
+
+\documentclass[review]{elsarticle}
+\graphicspath{ {./figures/} }
+\usepackage{hyperref}
+\usepackage{float}
 \usepackage{verbatim} %comments
+\usepackage{apalike}
+\restylefloat{figure}
+\floatstyle{plaintop} %table caption at top
+\restylefloat{table}
+
+
+
+\journal{Expert Systems with Applications}
+
+%% For ESWA journal you need to use APA style
+\bibliographystyle{model5-names}\biboptions{authoryear}
+
+\begin{document}
+\begin{frontmatter}
+
+%The title page must contain the title of the paper and the full name/full affiliation with country/e-mail address for each author and co-author of the manuscript. Please make sure you have included all elements listed below with your manuscript submission.
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+\textbf{ \large Expert Systems with Applications \LaTeX\ template}
+
+\vspace{1.5cm}
+
+% Author names and affiliations
+First Author$^{a,b}$ (first.author@mail.com), Second Author$^a$ (second.author@mail.com), Last Author$^c$ (last.author@mail.com) \\
+
+\hspace{10pt}
+
+\begin{flushleft}
+\small  
+$^a$ Full address of first author, including the country name \\
+$^b$ Full address of second author, including the country name \\
+$^c$ Full address of last author, including the country name
+
+\begin{comment}
+Clearly indicate who will handle correspondence at all stages of refereeing and publication, also post-publication. Ensure that phone numbers (with country and area code) are provided in addition to the e-mail address and the complete postal address. Contact details must be kept up to date by the corresponding author.
+\end{comment}
+
+\vspace{1cm}
+\textbf{Corresponding author at: Full address of the corresponding author, including the country name.} \\
+Last Author \\
+Full address of the corresponding author, including the country name \\
+Tel: (555) 555-1234 \\
+Email: last.author@mail.com
+
+\end{flushleft}        
+\end{center}
+\end{titlepage}
+
+\title{Expert Systems with Applications \LaTeX\ template}
+
+\author[label1,label2]{First Author}
+\ead{first.author@mail.com}
+
+\author[label1]{Second Author}
+\ead{second.author@mail.com}
+
+\author[label3]{Last Author \corref{cor1}}
+\ead{last.author@mail.com}
+
+\cortext[cor1]{Corresponding author.}
+\address[label1]{Full address of first author, including the country name}
+\address[label2]{Full address of second author, including the country name}
+\address[label3]{Full address of last author, including the country name}
+
+\begin{abstract}
+A concise and factual abstract is required. The abstract should state briefly the purpose of the research, the principal results and major conclusions. An abstract is often presented separately from the article, so it must be able to stand alone. For this reason, References should be avoided, but if essential, then cite the author(s) and year(s). Also, non-standard or uncommon abbreviations should be avoided, but if essential they must be defined at their first mention in the abstract itself.
+\end{abstract}
+
+\begin{keyword}
+ESWA \sep \LaTeX \sep Elsevier \sep template
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+\label{introduction}
+
+This template helps you to create a properly formatted \LaTeX\ manuscript for the ESWA journal. ESWA is a refereed international journal whose focus is on exchanging information relating to expert and intelligent systems applied in industry, government, and universities worldwide. The thrust of the journal is to publish papers dealing with the design, development, testing, implementation, and/or management of expert and intelligent systems, and also to provide practical guidelines in the development and management of these systems. 
+
+\section{Essential title page information}
+\label{title_page}
+
+\begin{enumerate}
+    \item \textbf{Title.} Concise and informative. Titles are often used in information-retrieval systems. Avoid abbreviations and formulae where possible.
+    \item \textbf{Author names and affiliations.} Where the family name may be ambiguous (e.g., a double name), please indicate this clearly. Present the authors' affiliation addresses (where the actual work was done) below the names. Indicate all affiliations with a lower-case superscript letter immediately after the author's name and in front of the appropriate address. Provide the full postal address of each affiliation, including the country name and, the e-mail address of each author.
+    \item \textbf{Corresponding author.} Clearly indicate who will handle correspondence at all stages of refereeing and publication, also post-publication. Ensure that phone numbers (with country and area code) are provided in addition to the e-mail address and the complete postal address. Contact details must be kept up to date by the corresponding author.
+    \item \textbf{Present/permanent address.} If an author has moved since the work described in the article was done, or was visiting at the time, a 'Present address' (or 'Permanent address') may be indicated as a footnote to that author's name. The address at which the author actually did the work must be retained as the main, affiliation address. Superscript Arabic numerals are used for such footnotes.
+\end{enumerate}
+
+\section{Table example}
+
+\begin{table}[H]
+\caption{Table caption.}
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+Algorithm & Measure 1 & Measure 2 & Measure 3 \\ \hline
+ALG1 &-1.0000&0.3301&-0.0000 \\ \hline
+ALG2 & -0.8897 &0.9308&0.9061 \\ \hline
+ALG3 & -0.8335&0.8361&0.6983 \\ \hline
+ALG4 & -0.5835&0.8785&0.7155 \\ \hline
+ALG5 & -0.8140&0.7447&0.6028 \\ \hline
+\end{tabular}
+
+\end{table}
+
+\section{Reference style and reference list}
+\label{reference_style}
+
+All paper submissions must completely comply with ESWA/ESWA X reference style and reference list (see details at
+\href{https://www.elsevier.com/journals/expert-systems-with-applications/0957-4174/guide-for-authors}{https://www.elsevier.com/journals/\\expert-systems-with-applications/0957-4174/guide-for-authors}).
+
+\subsection{Reference Style}
+Citations in the text should follow the referencing style used by the American Psychological Association. You are referred to the Publication Manual of the American Psychological Association, Sixth Edition, ISBN 978-1-4338-0561-5.  APA's in-text citations require the author's last name and the year of publication. You should cite publications in the text, for example, (Smith, 2020).  However, you should not use [Smith, 2020].
+
+\subsection{Reference List}
+References should be arranged first alphabetically by the surname of the first author followed by initials of the author's given name, and then further sorted chronologically if necessary. More than one reference from the same author(s) in the same year must be identified by the letters 'a', 'b', 'c', etc., placed after the year of publication. For example, Van der Geer, J., Hanraads, J. A. J., \& Lupton, R. A. (2010). The art of writing a scientific article. Journal of Scientific Communications, 163, 51-59. https://doi.org/10.1016/j.Sc.2010.00372. There should be no [1], [2], [3], etc in your references list.
+
+
+For textual citations use \textbackslash cite\{\}. Here is an example \cite{Feynman1963118,Dirac1953888}. For parenthetical citations use \textbackslash citep\{\}. Another example for citing \citep{Smith2012qr,Smith2013jd,art}: 
+
+
+\section*{CRediT authorship contribution statement}
+\textbf{First Author:} Conceptualization, Methodology, Software, Writing – original draft, Writing – review \& editing. \textbf{Second Author:} Methodology, Software, Writing – review \& editing. \textbf{Last Author:} Supervision, Methodology, Validation.
+\begin{comment}
+For transparency, we require corresponding authors to provide co-author contributions to the manuscript using the relevant CRediT roles. The CRediT taxonomy includes 14 different roles describing each contributor’s specific contribution to the scholarly output. The roles are: Conceptualization; Data curation; Formal analysis; Funding acquisition; Investigation; Methodology; Project administration; Resources; Software; Supervision; Validation; Visualization; Roles/Writing - original draft; and Writing - review & editing. Note that not all roles may apply to every manuscript, and authors may have contributed through multiple roles.
+\end{comment}
+
+
+\section*{Declaration of Competing Interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Acknowledgements}
+Collate acknowledgements in a separate section at the end of the article before the references and do not, therefore, include them on the title page, as a footnote to the title or otherwise. List here those individuals who provided help during the research (e.g., providing language help, writing assistance or proof reading the article, etc.).
+
+\section*{Data availability}
+Provide a link to your data if available.
+
+\bibliography{sample}
+
+\end{document}
+
 \usepackage{apalike}
 \restylefloat{figure}
 \restylefloat{table}
