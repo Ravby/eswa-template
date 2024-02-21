@@ -8,4 +8,5 @@
 
 * 20.11.2020 - first version
 * 9.11.2023 - added sections: CRediT authorship contribution statemen, Declaration of Competing Interest and Data availability
+* 21.2.2024 - removed duplicate text
 
